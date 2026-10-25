@@ -45,12 +45,13 @@ Pricing per 1M tokens (input / output): `claude-sonnet-5-5` $2.00 / $10.00. `cla
 | | claude-opus-5-5 | claude-sonnet-5-5 |
 |---|---|---|
 | Cost for the 15 files | $0.3381 | $0.1691 |
-| Files with identical records | 10 / 15 | 10 / 15 |
-| Records with identical content | 38 / 43 | 38 / 43 |
+| Records extracted | 43 | 42 |
+| Files where Sonnet's records match Opus's exactly | baseline | 10 / 15 |
+| Records that match Opus's exactly (out of the 43 records either model returned) | baseline | 38 / 43 |
 | Resulting `output.csv` | baseline | **byte-identical** |
 | Sample / custom scores | unchanged | unchanged |
 
-The 5 differences:
+The agreement figures compare the two models with each other, so Opus is the reference column. The 5 records that do not match (1 returned only by Opus, 4 with a differing field):
 - `support_1034` name: Opus "Kofi Agyeman", which is correct per the screenshot. Sonnet "Kofi Ageyman".
 - `support_9538`: Opus also attaches the page's `user_11` reference. Sonnet does not.
 - `analytics_7438`: Sonnet lists `user_20` as a related resource. It is not a resource ID, so the pipeline ignores it.
