@@ -1,39 +1,33 @@
-# Ghost Data Still Exists — Deletion-Audit Agent
+# Ghost Data Audit
 
-This agent decides, for each request in `dataset/deletion_requests.csv`, whether deletion was authorized and whether it is actually complete at the request's `audit_at`. It writes `output.csv` (`case_id,deletion_status,steps_json`) at the repository root, one row per request in natural `case_id` order.
+An AI-assisted **deletion-audit agent** that checks whether a customer's personal data is really gone after a "right to be forgotten" request, or whether copies survive in replicas, logs, search indexes, exports, support attachments, analytics and backups.
 
-The challenge contract is in [`problem_statement.md`](./problem_statement.md).
+Built for the [HackerRank Orchestrate (October 2026)](https://github.com/interviewstreet/hackerrank-orchestrate-october26) challenge **"Ghost Data Still Exists"**. The full task contract is in [`problem_statement.md`](./problem_statement.md).
 
-## Setup
+## The problem
 
-**Requires Python 3.12** (developed and tested with 3.12.15). Other Python versions are not supported and may fail.
+A fictional retailer, Northstar Shop, marked a deletion request as **Complete**, but the customer's data was still spread across secondary systems, and a sync job had even recreated what the primary service had deleted.
 
-```bash
-python3.12 -m venv .venv && source .venv/bin/activate   # Python 3.12
-pip install -r code/requirements.txt
-echo "ANTHROPIC_API_KEY=..." > .env                      # read from the environment / .env only
-```
+For each of 518 deletion requests, the agent must:
 
-The `dataset/` folder must sit at the repository root, next to `code/`.
+1. Decide whether the request actually asks for deletion. If not, the case is `NOT_APPLICABLE`.
+2. Resolve the person's current **and historical** identifiers (old emails, phones, email hashes, internal ids).
+3. Reconstruct the true state of every related record at the audit cut-off (`audit_at`), treating workflow statuses as claims rather than proof.
+4. Apply the deletion policy (`DELETE`, `REDACT`, `ANONYMIZE` or `RETAIN`), including account tombstones and records that must be kept.
+5. Return `COMPLETE` with evidence-backed checks, or `INCOMPLETE` with findings, an ordered remediation plan and the checks that must pass afterwards.
 
-## Run
+The agent **audits**. It never deletes anything: remediation steps are a proposed plan.
 
-```bash
-python code/main.py                 # all 518 requests  -> ./output.csv
-python code/main.py --offline       # same, using only cached LLM responses (no API key needed)
-python code/main.py --sample        # 32 sample requests -> code/evaluation/sample_predictions.csv
-python code/evaluation/main.py -v   # score sample predictions against dataset/sample_output.csv
-python code/evaluation/custom_cases.py --offline   # participant-built evaluation cases
-python code/evaluation/test_intent_fallback.py      # mock-LLM test of the intent retry / unclassified reporting (no API, no report changes)
-python code/evaluation/compare_media_models.py     # Opus 5.5 vs Sonnet 5.5 image/PDF extraction (cached)
-python code/evaluation/compare_intent_models.py    # Opus 5.5 vs Sonnet 5.5 intent classification (cached)
-```
+## Approach
 
-Models are chosen per task in `code/config/models.json`. Both tasks use `claude-sonnet-5-5`, chosen after comparing against `claude-opus-5-5` (see `code/evaluation/usage_report.md`). Override with `AUDIT_INTENT_MODEL` / `AUDIT_MEDIA_MODEL`.
+The core is **deterministic Python**, and the LLM is used only where reading unstructured content is needed:
 
-`code/cache/llm/` ships with the cached Claude responses: one `<sha256>.json` per request, each recording its `purpose`, `model`, `source` and token `usage`, and `index.json` mapping file names to what was sent. With it, `--offline` reproduces `output.csv` exactly. A clean run without the cache makes 25 Claude calls (about $0.33).
-
-## Architecture
+| Task | How |
+|---|---|
+| Parse SQL snapshots, JSON, six log formats and text records | Python (SQL loaded into in-memory SQLite) |
+| Read 11 screenshots and 4 PDFs | Claude vision, extracted once and cached |
+| Classify whether a request text asks for deletion (6 languages) | Claude, on de-duplicated texts in batches of 40, with retry and warnings for unanswered items |
+| Identity resolution, state at `audit_at`, policy, step ordering | Python only |
 
 ```
 evidence files ──► extract.py ─► Observation table ◄── media.py (Claude vision: PNG/PDF, cached)
@@ -43,26 +37,83 @@ request_text ─► intent.py (Claude, batched, cached) ─► NOT_APPLICABLE sh
 per case: link resources ─► state at audit_at (state.py) ─► policy ─► ordered steps (audit.py)
 ```
 
-| Module (in `code/`) | Role |
+Design decisions:
+
+- **Policy and operations are loaded from data**: from `deletion_rules.csv` and the spec's operation table, not hard-coded.
+- **Model choice was measured, not assumed.** Opus 5.5 and Sonnet 5.5 were compared on the same inputs. They agreed on all 375 distinct request texts, and their media extraction produced a byte-identical `output.csv`, so Sonnet 5.5 was chosen at half the cost.
+- **Every LLM response is cached** by a hash of model, prompt, content and schema. Reruns are free and deterministic, and `--offline` reproduces `output.csv` exactly.
+
+Module-level details are in [`code/README.md`](./code/README.md).
+
+## Results
+
+Measured on the 32 public sample cases with known answers:
+
+| Metric | Value |
 |---|---|
-| `extract.py` | Parsers for SQL snapshots (run in in-memory SQLite, every replica table), JSON bundles/exports/ledgers, six log dialects (trace-correlated by `trace_id`), and the TXT handover. Each record sighting becomes an `Observation`. Full snapshots also report which systems they cover, so a record they don't list can be proven absent. |
-| `state.py` | Maps an observation to its data category and state: PRESENT, CLEAN (identifiers removed), ABSENT, ACTIVE, DISABLED or BLOCKED. Reported results and workflow statuses are never treated as proof. |
-| `audit.py` | Resolves identity, links evidence by identifier tokens (email, phone, hash, user_id, plus resource references), reconstructs the latest state at or before `audit_at` with replicas merged, applies the rules loaded by `policy.py`, and builds and orders the steps. |
-| `policy.py` | Loads `dataset/deletion_rules.csv` (category -> DELETE / REDACT / ANONYMIZE / RETAIN). A RETAIN rule whose condition concerns restore access (backups) means "keep, but block restore". |
-| `operations.py` | Loads `config/operations.json`, a copy of the spec's Allowed Operations table. Each step's phase and state, and the step order, come from it; at startup the planner's operations are checked against it. |
-| `workflow.py` | Links resources that carry no identifiers (deleted accounts, anonymized profiles) through the deletion-workflow activity around `reported_at`, using global constraint propagation. |
-| `intent.py` | Claude classifies each distinct request text in batches. Texts the model leaves unanswered are retried once in their own batch; any still unanswered are printed as a warning, audited as deletion requests (fail-safe) and listed in `code/evaluation/evaluation_report.md`. |
-| `media.py` | Claude reads the 11 screenshots and 4 PDFs into structured records; business references are mapped to resource ids through data-catalog aliases. |
-| `llm.py` | Shared Claude client: structured JSON output, on-disk cache (deterministic reruns), per-task model selection and token accounting. |
+| Deletion-status accuracy | **100 %** (32/32) |
+| Exact match (status + full ordered steps) | **75 %** (24/32) |
+| Step-level F1 | 97.1 % |
+| Sequence similarity | 95.6 % |
 
-Step ordering follows the contract: FINDING → REMEDIATION → VERIFICATION, then the operation order in the spec, then `system_id`, then `resource_id`. Within remediation, data flows are disabled and restores blocked before any records are changed. Findings cite the latest evidence at or before `audit_at`. COMPLETE cases cite evidence on every check. Remediation steps, and verification steps in INCOMPLETE cases, have an empty `evidence_id`.
+Two of the 8 remaining mismatches cite evidence ids that do not exist in the provided data. The others come from identifier-less records that cannot be told apart from the available evidence. The code was tuned on the sample, so accuracy on the full 518 cases is expected to be somewhat lower.
 
-Only participant-facing files under `dataset/` are read. Evaluation results and token/cost breakdowns are in [`code/evaluation/evaluation_report.md`](./code/evaluation/evaluation_report.md) and [`code/evaluation/usage_report.md`](./code/evaluation/usage_report.md).
+Cost: a clean full run takes **25 Claude calls, about $0.33**. Total API spend for the whole development was about $1.97.
 
-## Packaging
+Full metrics, the four custom evaluation cases, the failure log and the cost breakdown are in:
+
+- [`code/evaluation/evaluation_report.md`](./code/evaluation/evaluation_report.md)
+- [`code/evaluation/usage_report.md`](./code/evaluation/usage_report.md)
+
+## Run it
+
+**Requirements:** Python 3.12 (the code uses 3.12-only syntax). An Anthropic API key is needed only for runs without the cache.
+
+### 1. Get the dataset
+
+The dataset belongs to the challenge and is not redistributed here. Copy it from the original repository:
 
 ```bash
-zip -r code.zip README.md code -x "*/__pycache__/*" "*/.venv/*" "*/venv/*" "*/node_modules/*" "*/.git/*" "*/.DS_Store"
+git clone https://github.com/Jo-varo/ghost-data-audit.git
+cd ghost-data-audit
+git clone --depth 1 https://github.com/interviewstreet/hackerrank-orchestrate-october26.git /tmp/hr-orchestrate
+cp -R /tmp/hr-orchestrate/dataset ./dataset
 ```
 
-`dataset/`, the virtual environment and `.env` stay out of `code.zip`.
+`dataset/` must sit at the repository root, next to `code/`. It is git-ignored.
+
+### 2. Install
+
+```bash
+python3.12 -m venv .venv && source .venv/bin/activate
+pip install -r code/requirements.txt
+```
+
+With [uv](https://docs.astral.sh/uv/): `uv venv --python 3.12 && source .venv/bin/activate && uv pip install -r code/requirements.txt`.
+
+### 3. Run
+
+```bash
+python code/main.py --offline       # all 518 requests from the cached LLM responses -> ./output.csv (no API key)
+python code/main.py --sample --offline
+python code/evaluation/main.py -v   # score the sample predictions
+python code/evaluation/custom_cases.py --offline
+python code/evaluation/test_intent_fallback.py
+```
+
+To call the API instead of the cache, add `ANTHROPIC_API_KEY=...` to a `.env` file at the repository root and drop `--offline`. Models are configured per task in [`code/config/models.json`](./code/config/models.json), or with the `AUDIT_INTENT_MODEL` and `AUDIT_MEDIA_MODEL` environment variables.
+
+## Repository contents
+
+| Path | What it is |
+|---|---|
+| `code/` | The agent, its configuration, the LLM cache and the evaluation scripts and reports |
+| `output.csv` | Predictions for the 518 requests (`case_id,deletion_status,steps_json`) |
+| `log.txt` | Development transcript written by the coding agent (Claude Code), as the challenge required. Local paths are replaced with `<repo_root>`. |
+| `problem_statement.md` | The challenge specification, © HackerRank, included for reference |
+
+## Notes
+
+- Built with Claude Code as a coding assistant. Architecture, model choices and review decisions are documented in the reports and in `log.txt`.
+- All people, emails and records in the dataset and in the cached responses are fictional, generated by the challenge organizers.
+- This solution was not submitted to the contest: the submission window closed before upload.
