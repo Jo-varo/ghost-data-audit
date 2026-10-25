@@ -1,0 +1,77 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-sonnet-5-5",
+ "source": "evidence_32 backup_restore_console_20260429.png",
+ "usage": {
+  "input_tokens": 3891,
+  "output_tokens": 498
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "backup_9291",
+    "display_reference": "backup_9291",
+    "record_kind": "backup_archive",
+    "exists": "present",
+    "emails": [
+     "bluepeakco@outlook.com"
+    ],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "backup_9288",
+    "display_reference": "backup_9288",
+    "record_kind": "backup_archive",
+    "exists": "present",
+    "emails": [
+     "miller.logistics@company.com"
+    ],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "backup_9287",
+    "display_reference": "backup_9287",
+    "record_kind": "backup_archive",
+    "exists": "present",
+    "emails": [
+     "areed1433@gmail.com"
+    ],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "backup_9286",
+    "display_reference": "backup_9286",
+    "record_kind": "backup_archive",
+    "exists": "present",
+    "emails": [
+     "summit-retail@company.com"
+    ],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   }
+  ]
+ }
+}

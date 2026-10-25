@@ -1,0 +1,88 @@
+{
+ "purpose": "intent_classification",
+ "model": "claude-sonnet-5-5",
+ "source": "evaluation request texts batch 10/10 (15 texts)",
+ "usage": {
+  "input_tokens": 1566,
+  "output_tokens": 431
+ },
+ "result": {
+  "results": [
+   {
+    "id": "0",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "1",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "2",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "3",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "4",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "5",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "6",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "7",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "8",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "9",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "10",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "11",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "12",
+    "request_type": "CORRECTION",
+    "authorizes_deletion": false
+   },
+   {
+    "id": "13",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "14",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   }
+  ]
+ }
+}

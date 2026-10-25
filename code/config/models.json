@@ -1,0 +1,5 @@
+{
+  "_note": "Claude model per task. Environment overrides: AUDIT_INTENT_MODEL, AUDIT_MEDIA_MODEL.",
+  "intent_classification": "claude-sonnet-5-5",
+  "media_extraction": "claude-sonnet-5-5"
+}

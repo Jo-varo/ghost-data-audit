@@ -1,0 +1,109 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-sonnet-5-5",
+ "source": "evidence_27 legal_retention_register_20260529.pdf",
+ "usage": {
+  "input_tokens": 4834,
+  "output_tokens": 657
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "",
+    "display_reference": "ORD-20264118",
+    "record_kind": "other",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_08"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "ORD-20264207",
+    "record_kind": "other",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_12"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "ORD-20264319",
+    "record_kind": "other",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_17"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "ORD-20264402",
+    "record_kind": "other",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_21"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "ORD-20264511",
+    "record_kind": "other",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_24"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "ORD-20264600",
+    "record_kind": "other",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_29"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   }
+  ]
+ }
+}

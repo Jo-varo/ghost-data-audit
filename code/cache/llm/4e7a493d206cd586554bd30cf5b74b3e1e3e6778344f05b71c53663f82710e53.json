@@ -1,0 +1,33 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-sonnet-5-5",
+ "source": "evidence_18 account_history_report_20260718.pdf",
+ "usage": {
+  "input_tokens": 4691,
+  "output_tokens": 146
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "",
+    "display_reference": "NST-2026-0718-1842",
+    "record_kind": "other",
+    "exists": "present",
+    "emails": [
+     "ingrid.dahl@outlook.com"
+    ],
+    "phones": [],
+    "names": [
+     "Ingrid Dahl"
+    ],
+    "user_refs": [
+     "user_18"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   }
+  ]
+ }
+}

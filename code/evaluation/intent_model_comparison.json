@@ -1,0 +1,76 @@
+{
+  "baseline": "claude-opus-5-5",
+  "candidate": "claude-sonnet-5-5",
+  "sets": {
+    "evaluation": {
+      "requests": 518,
+      "distinct_texts": 375,
+      "same_decision_texts": 375,
+      "same_label_texts": 375,
+      "decision_differences": [],
+      "request_type_differences": [],
+      "not_applicable_cases": {
+        "claude-opus-5-5": [
+          "case_533",
+          "case_534",
+          "case_535",
+          "case_536",
+          "case_537",
+          "case_538",
+          "case_539",
+          "case_540",
+          "case_541",
+          "case_542"
+        ],
+        "claude-sonnet-5-5": [
+          "case_533",
+          "case_534",
+          "case_535",
+          "case_536",
+          "case_537",
+          "case_538",
+          "case_539",
+          "case_540",
+          "case_541",
+          "case_542"
+        ]
+      }
+    },
+    "sample": {
+      "requests": 32,
+      "distinct_texts": 32,
+      "same_decision_texts": 32,
+      "same_label_texts": 32,
+      "decision_differences": [],
+      "request_type_differences": [],
+      "not_applicable_cases": {
+        "claude-opus-5-5": [],
+        "claude-sonnet-5-5": []
+      }
+    }
+  },
+  "usage": {
+    "claude-opus-5-5": [
+      {
+        "purpose": "intent_classification",
+        "model": "claude-opus-5-5",
+        "calls": 0,
+        "cached_calls": 11,
+        "input_tokens": 29160,
+        "output_tokens": 11532,
+        "cost_usd": 0.34728000000000003
+      }
+    ],
+    "claude-sonnet-5-5": [
+      {
+        "purpose": "intent_classification",
+        "model": "claude-sonnet-5-5",
+        "calls": 0,
+        "cached_calls": 11,
+        "input_tokens": 29160,
+        "output_tokens": 11532,
+        "cost_usd": 0.17364000000000002
+      }
+    ]
+  }
+}

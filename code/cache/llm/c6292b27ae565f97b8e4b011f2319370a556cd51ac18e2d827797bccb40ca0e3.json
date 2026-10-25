@@ -1,0 +1,33 @@
+{
+ "purpose": "intent_classification",
+ "model": "claude-sonnet-5-5",
+ "source": "custom request texts batch 1/1 (4 texts)",
+ "usage": {
+  "input_tokens": 789,
+  "output_tokens": 122
+ },
+ "result": {
+  "results": [
+   {
+    "id": "0",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "1",
+    "request_type": "ACCESS",
+    "authorizes_deletion": false
+   },
+   {
+    "id": "2",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   },
+   {
+    "id": "3",
+    "request_type": "DELETION",
+    "authorizes_deletion": true
+   }
+  ]
+ }
+}

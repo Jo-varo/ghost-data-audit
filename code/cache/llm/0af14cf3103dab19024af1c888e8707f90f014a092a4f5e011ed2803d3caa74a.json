@@ -1,0 +1,49 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-opus-5-5",
+ "source": "evidence_58 delivery_correction_attachment.pdf",
+ "usage": {
+  "input_tokens": 4698,
+  "output_tokens": 261
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "support_001",
+    "display_reference": "CS-4827",
+    "record_kind": "support_message",
+    "exists": "present",
+    "emails": [
+     "priya.raman@gmail.com"
+    ],
+    "phones": [
+     "+91 98765 73142"
+    ],
+    "names": [
+     "Priya Raman"
+    ],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "delivery_address_correction.pdf",
+    "record_kind": "support_attachment",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": [
+     "support_001"
+    ]
+   }
+  ]
+ }
+}

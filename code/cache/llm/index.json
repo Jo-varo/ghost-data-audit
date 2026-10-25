@@ -1,0 +1,272 @@
+{
+ "bf1efc10751b3d0851a75521f9f7cd30d55e9481ae7a2a273ce77c0c9897cfb8.json": {
+  "purpose": "intent_classification",
+  "model": "claude-opus-5-5",
+  "source": "custom request texts batch 1/1 (4 texts)"
+ },
+ "c6292b27ae565f97b8e4b011f2319370a556cd51ac18e2d827797bccb40ca0e3.json": {
+  "purpose": "intent_classification",
+  "model": "claude-sonnet-5-5",
+  "source": "custom request texts batch 1/1 (4 texts)"
+ },
+ "d19426cfaa196a96c70415eb36767342cfa34bfcaa07bbe47e2d622c27777f81.json": {
+  "purpose": "intent_classification",
+  "model": "claude-opus-5-5",
+  "source": "evaluation request texts batch 1/10 (40 texts)"
+ },
+ "9b4e7a8d64e4fd1a83750d58a273e7b1f493c65462ac78b27277a3b75dc53632.json": {
+  "purpose": "intent_classification",
+  "model": "claude-sonnet-5-5",
+  "source": "evaluation request texts batch 1/10 (40 texts)"
+ },
+ "7872d145f22958c017c30bb4f47d7149c5bf17a8c3e36be4c8bebdef07256b75.json": {
+  "purpose": "intent_classification",
+  "model": "claude-opus-5-5",
+  "source": "evaluation request texts batch 10/10 (15 texts)"
+ },
+ "6d4d0e8393e417617bc2b57f6cd9ae60e6787fec7af4bfca4b16ab314fdfeca7.json": {
+  "purpose": "intent_classification",
+  "model": "claude-sonnet-5-5",
+  "source": "evaluation request texts batch 10/10 (15 texts)"
+ },
+ "0f8630ba1168684c5fa1b98cfa79cc8d93ba99cfe0908f21b09dcf638c7aeb12.json": {
+  "purpose": "intent_classification",
+  "model": "claude-opus-5-5",
+  "source": "evaluation request texts batch 2/10 (40 texts)"
+ },
+ "4f3c951f46323a2e0466cb021e596d550fd2b3254c332b5c46e3e98d71026307.json": {
+  "purpose": "intent_classification",
+  "model": "claude-sonnet-5-5",
+  "source": "evaluation request texts batch 2/10 (40 texts)"
+ },
+ "6c607f4f1aea368275b7da0537defa367fdb8ac184a22c6418b1531e1e7ca1b3.json": {
+  "purpose": "intent_classification",
+  "model": "claude-opus-5-5",
+  "source": "evaluation request texts batch 3/10 (40 texts)"
+ },
+ "ab8c5436c1e3c63dea063ea7302693790f441e17ec80233130c163e3d002d2bc.json": {
+  "purpose": "intent_classification",
+  "model": "claude-sonnet-5-5",
+  "source": "evaluation request texts batch 3/10 (40 texts)"
+ },
+ "2f9e4216ece57f81596fe0889b19d9249c90054994749401019ca73f7db25dc3.json": {
+  "purpose": "intent_classification",
+  "model": "claude-opus-5-5",
+  "source": "evaluation request texts batch 4/10 (40 texts)"
+ },
+ "aa9df6c97adbae44eac96f3383e829026b9efdd90010e6e9825a6559dc1480ce.json": {
+  "purpose": "intent_classification",
+  "model": "claude-sonnet-5-5",
+  "source": "evaluation request texts batch 4/10 (40 texts)"
+ },
+ "54ad06b690da641c0a769d97cb69fe8a3d5d4dc0b1f9ca40ad698d81c1d519a7.json": {
+  "purpose": "intent_classification",
+  "model": "claude-opus-5-5",
+  "source": "evaluation request texts batch 5/10 (40 texts)"
+ },
+ "bd11e291510c3a875583a5eff32b945d3c2a251be06c9a72e3a4287476e7b2f1.json": {
+  "purpose": "intent_classification",
+  "model": "claude-sonnet-5-5",
+  "source": "evaluation request texts batch 5/10 (40 texts)"
+ },
+ "9cbb128760f732f6eb9e248b4c825fbdbcb0a3303261b13e09b0c729472a29cc.json": {
+  "purpose": "intent_classification",
+  "model": "claude-opus-5-5",
+  "source": "evaluation request texts batch 6/10 (40 texts)"
+ },
+ "e4b0900d1dde9a85069888bd2af239b1b422a950cf4be6c07c8e6fb99cb1c886.json": {
+  "purpose": "intent_classification",
+  "model": "claude-sonnet-5-5",
+  "source": "evaluation request texts batch 6/10 (40 texts)"
+ },
+ "3b4bee824809a348c6c9ef0e52c0064c37450702552ba1a7495126999a6bf98a.json": {
+  "purpose": "intent_classification",
+  "model": "claude-opus-5-5",
+  "source": "evaluation request texts batch 7/10 (40 texts)"
+ },
+ "769979aea1c0fd94ea1a055438c955ff09e5d24051792192d04555384053b586.json": {
+  "purpose": "intent_classification",
+  "model": "claude-sonnet-5-5",
+  "source": "evaluation request texts batch 7/10 (40 texts)"
+ },
+ "d1221f6bee0ccec10f9a28fe88e4088e4375de2fbf9ec724785d31badf06ddfb.json": {
+  "purpose": "intent_classification",
+  "model": "claude-opus-5-5",
+  "source": "evaluation request texts batch 8/10 (40 texts)"
+ },
+ "9674c0b910c1d0046fb6df50258de5a9ed7b7e8834833c780a51fe560f624d79.json": {
+  "purpose": "intent_classification",
+  "model": "claude-sonnet-5-5",
+  "source": "evaluation request texts batch 8/10 (40 texts)"
+ },
+ "1aa3719ac0935d3f7b4d4e3b35f430eb505e321a8e7cc27811b253b8af80cd82.json": {
+  "purpose": "intent_classification",
+  "model": "claude-opus-5-5",
+  "source": "evaluation request texts batch 9/10 (40 texts)"
+ },
+ "8767673a8f8d6376b13bad3d0f6983257c8fe511e0d7928f025fb117e738bff2.json": {
+  "purpose": "intent_classification",
+  "model": "claude-sonnet-5-5",
+  "source": "evaluation request texts batch 9/10 (40 texts)"
+ },
+ "d04d636ce6c7bfe78daaf2ce5529777c45974f091748189c19a7d56afa64315a.json": {
+  "purpose": "intent_classification",
+  "model": "claude-opus-5-5",
+  "source": "sample request texts batch 1/1 (32 texts)"
+ },
+ "2bc793f17a7638f56369ccc225de23b841e4949dacbe93b89fef7b4ef2292d49.json": {
+  "purpose": "intent_classification",
+  "model": "claude-sonnet-5-5",
+  "source": "sample request texts batch 1/1 (32 texts)"
+ },
+ "dbf1d4e1f70cd202d432a5bdf0d811cd975faba234aba1f4d6eb13c67244aca5.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_04 account_admin_console_20260926.png"
+ },
+ "8f03cbc5332eab8ca21ef09375b27966df03bbd0a7d8ddb9a637e85505492001.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_04 account_admin_console_20260926.png"
+ },
+ "cc22ad0f00610e69cb5332dad7f20127709549ea4048167f0d4ba3b587959de1.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_09 search_index_inspector_20260901.png"
+ },
+ "88960009d7fb0aeecd0c13849229426d34ef5c1621027c3f503f71bf8ea4d5cc.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_09 search_index_inspector_20260901.png"
+ },
+ "e9cccb7d0e1eae3002f5dbac69925aaa2e853c41b330ddb5b1e7775239d160a4.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_14 connector_management_console_20260807.png"
+ },
+ "345fc39043b0db965ac4ec6e1f4471971ef27725962232495ccb34d2c999bc61.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_14 connector_management_console_20260807.png"
+ },
+ "d6394e35badc6973c7a99cab296c9e05a36bbb9fb792b7a67b9c257170037949.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_18 account_history_report_20260718.pdf"
+ },
+ "4e7a493d206cd586554bd30cf5b74b3e1e3e6778344f05b71c53663f82710e53.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_18 account_history_report_20260718.pdf"
+ },
+ "6283fcfad4aa8e744d4643b2f8c9eba0d52d8060d346145f69a5a639c8c201e4.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_19 analytics_profile_view_20260713.png"
+ },
+ "a588b902fcd2429907843cd4025fa34eb2c7b9f6d94be50407048617dbeb3119.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_19 analytics_profile_view_20260713.png"
+ },
+ "73eb417e4d387c52ab0dbf28517fb840bc346a90ff03bdb68f8b801746cb9b2d.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_23 customer_export_console_20260618.png"
+ },
+ "4ec6cb391c100f0007e68b3d8173fb786af49890aa16b12abe6b68cd26e38360.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_23 customer_export_console_20260618.png"
+ },
+ "91f4fd5659bea8512a3e9d0102d2d56ccf2171e630e4dbe22fbb29334559c925.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_27 legal_retention_register_20260529.pdf"
+ },
+ "ad54c16a494b3ec1e795e9ca53d42d519677cd097920825f1d345a5c1f3f3b22.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_27 legal_retention_register_20260529.pdf"
+ },
+ "d1dde67be2c5ba4dbf535ede19a4575f0bf9f954b526f9ae427d8efd1d6ebb86.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_28 support_ticket_console_20260524.png"
+ },
+ "219dc128b59f4b2c9958c33531c21ac31ed69b234bbdc64900d8c2ac9da1ec8a.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_28 support_ticket_console_20260524.png"
+ },
+ "dc9d2409ce206004bc03b03e122b77dd3615bb2353e7e67fd73d63ac6cfbe829.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_32 backup_restore_console_20260429.png"
+ },
+ "97e8b66bb2bac6789dce69b24de0c7a3df3564a38cb92525ca639290ab4f7a96.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_32 backup_restore_console_20260429.png"
+ },
+ "d08fa49782f2006437e260d8e0174fc7d054cb76bccf6c26b031a98771027b07.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_37 security_audit_explorer_20260905.png"
+ },
+ "6c8e605990a4b3cc91fa8762460f5cb189f3ebc9ce9a45207e585772c3a94fe5.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_37 security_audit_explorer_20260905.png"
+ },
+ "14641a6fae61c8b1da525df5f8402983683da18f85fb275473094261e2ee6d57.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_42 deleted_account_reference_20260310.png"
+ },
+ "04066d987b4dc19e43dc68de448f56b859137edadc1ee71f555e7d932dc1a36d.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_42 deleted_account_reference_20260310.png"
+ },
+ "15db789219fc306687b602699d3ecaaf161132b7f84166d1cb7442fd9169301d.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_46 object_storage_browser_20260213.png"
+ },
+ "e23c4c7fbe2d7fd5e7d039a3173519168ddcc720247d39380ba22291352ea40b.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_46 object_storage_browser_20260213.png"
+ },
+ "9a6cae553382c55980e97fcbfa78fe49bb840f67ae7c91910e4eb6cbea144877.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_55 security_retention_extract.pdf"
+ },
+ "8bb2958f55b4bf6729be83da3a4d828c688cd2a624d1d7fbfd80628d312b3dbe.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_55 security_retention_extract.pdf"
+ },
+ "0af14cf3103dab19024af1c888e8707f90f014a092a4f5e011ed2803d3caa74a.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_58 delivery_correction_attachment.pdf"
+ },
+ "7c8759e519df38d20792909c11c7e9d96ea6ffabcd2fecf05f43742b9739ecf8.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_58 delivery_correction_attachment.pdf"
+ },
+ "272a17ffd19957ff803abf92e59cbef5a7c1a717103754d0bf7b6b860d709108.json": {
+  "purpose": "media_extraction",
+  "model": "claude-opus-5-5",
+  "source": "evidence_60 marketing_profile_console.png"
+ },
+ "91f461d10a5e7fc9a4fe40b8ff2b99712cfd4cbc140766f9f4e72050dda9f088.json": {
+  "purpose": "media_extraction",
+  "model": "claude-sonnet-5-5",
+  "source": "evidence_60 marketing_profile_console.png"
+ }
+}

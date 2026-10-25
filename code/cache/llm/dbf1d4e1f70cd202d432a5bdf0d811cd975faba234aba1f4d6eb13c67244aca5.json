@@ -1,0 +1,55 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-opus-5-5",
+ "source": "evidence_04 account_admin_console_20260926.png",
+ "usage": {
+  "input_tokens": 3955,
+  "output_tokens": 272
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "account_5762",
+    "display_reference": "",
+    "record_kind": "account_profile",
+    "exists": "present",
+    "emails": [
+     "haruka.s1838@zoho.com"
+    ],
+    "phones": [
+     "+81 90 7610 2507"
+    ],
+    "names": [
+     "Haruka Sato"
+    ],
+    "user_refs": [
+     "user_11"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": [
+     "support_9538"
+    ]
+   },
+   {
+    "resource_id": "support_9538",
+    "display_reference": "CS-8538",
+    "record_kind": "support_message",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_11"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": [
+     "account_5762"
+    ]
+   }
+  ]
+ }
+}

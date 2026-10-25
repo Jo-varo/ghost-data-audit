@@ -1,0 +1,177 @@
+{
+  "baseline": "claude-opus-5-5",
+  "candidate": "claude-sonnet-5-5",
+  "files": 15,
+  "identical_files": 10,
+  "records": 43,
+  "identical_records": 38,
+  "usage": {
+    "claude-opus-5-5": [
+      {
+        "purpose": "media_extraction",
+        "model": "claude-opus-5-5",
+        "calls": 0,
+        "cached_calls": 15,
+        "input_tokens": 58713,
+        "output_tokens": 5164,
+        "cost_usd": 0.338132
+      }
+    ],
+    "claude-sonnet-5-5": [
+      {
+        "purpose": "media_extraction",
+        "model": "claude-sonnet-5-5",
+        "calls": 0,
+        "cached_calls": 15,
+        "input_tokens": 58713,
+        "output_tokens": 5166,
+        "cost_usd": 0.16908600000000001
+      }
+    ]
+  },
+  "per_file": [
+    {
+      "file_id": "evidence_04",
+      "file": "evidence/images/account_admin_console_20260926.png",
+      "records": 2,
+      "identical": false,
+      "only_claude-opus-5-5": [],
+      "only_claude-sonnet-5-5": [],
+      "field_differences": {
+        "support_9538": {
+          "user_refs": {
+            "claude-opus-5-5": [
+              "user_11"
+            ],
+            "claude-sonnet-5-5": []
+          }
+        }
+      }
+    },
+    {
+      "file_id": "evidence_09",
+      "file": "evidence/images/search_index_inspector_20260901.png",
+      "records": 2,
+      "identical": true
+    },
+    {
+      "file_id": "evidence_14",
+      "file": "evidence/images/connector_management_console_20260807.png",
+      "records": 2,
+      "identical": true
+    },
+    {
+      "file_id": "evidence_18",
+      "file": "evidence/documents/account_history_report_20260718.pdf",
+      "records": 1,
+      "identical": true
+    },
+    {
+      "file_id": "evidence_19",
+      "file": "evidence/images/analytics_profile_view_20260713.png",
+      "records": 1,
+      "identical": false,
+      "only_claude-opus-5-5": [],
+      "only_claude-sonnet-5-5": [],
+      "field_differences": {
+        "analytics_7438": {
+          "related_resource_ids": {
+            "claude-opus-5-5": [],
+            "claude-sonnet-5-5": [
+              "user_20"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "file_id": "evidence_23",
+      "file": "evidence/images/customer_export_console_20260618.png",
+      "records": 4,
+      "identical": true
+    },
+    {
+      "file_id": "evidence_27",
+      "file": "evidence/documents/legal_retention_register_20260529.pdf",
+      "records": 6,
+      "identical": true
+    },
+    {
+      "file_id": "evidence_28",
+      "file": "evidence/images/support_ticket_console_20260524.png",
+      "records": 1,
+      "identical": false,
+      "only_claude-opus-5-5": [],
+      "only_claude-sonnet-5-5": [],
+      "field_differences": {
+        "support_1034": {
+          "names": {
+            "claude-opus-5-5": [
+              "kofi agyeman"
+            ],
+            "claude-sonnet-5-5": [
+              "kofi ageyman"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "file_id": "evidence_32",
+      "file": "evidence/images/backup_restore_console_20260429.png",
+      "records": 5,
+      "identical": false,
+      "only_claude-opus-5-5": [
+        "backup_9281"
+      ],
+      "only_claude-sonnet-5-5": [],
+      "field_differences": {}
+    },
+    {
+      "file_id": "evidence_37",
+      "file": "evidence/images/security_audit_explorer_20260905.png",
+      "records": 6,
+      "identical": true
+    },
+    {
+      "file_id": "evidence_42",
+      "file": "evidence/images/deleted_account_reference_20260310.png",
+      "records": 1,
+      "identical": false,
+      "only_claude-opus-5-5": [],
+      "only_claude-sonnet-5-5": [],
+      "field_differences": {
+        "ref:user_17": {
+          "record_kind": {
+            "claude-opus-5-5": "account_profile",
+            "claude-sonnet-5-5": "other"
+          }
+        }
+      }
+    },
+    {
+      "file_id": "evidence_46",
+      "file": "evidence/images/object_storage_browser_20260213.png",
+      "records": 8,
+      "identical": true
+    },
+    {
+      "file_id": "evidence_55",
+      "file": "evidence/documents/security_retention_extract.pdf",
+      "records": 1,
+      "identical": true
+    },
+    {
+      "file_id": "evidence_58",
+      "file": "evidence/documents/delivery_correction_attachment.pdf",
+      "records": 2,
+      "identical": true
+    },
+    {
+      "file_id": "evidence_60",
+      "file": "evidence/images/marketing_profile_console.png",
+      "records": 1,
+      "identical": true
+    }
+  ]
+}

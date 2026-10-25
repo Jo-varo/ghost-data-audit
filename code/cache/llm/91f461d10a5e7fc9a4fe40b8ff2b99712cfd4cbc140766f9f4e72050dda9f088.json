@@ -1,0 +1,33 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-sonnet-5-5",
+ "source": "evidence_60 marketing_profile_console.png",
+ "usage": {
+  "input_tokens": 2940,
+  "output_tokens": 151
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "marketing_001",
+    "display_reference": "marketing_001",
+    "record_kind": "marketing_profile",
+    "exists": "present",
+    "emails": [
+     "sj.park@naver.com"
+    ],
+    "phones": [
+     "+82 10-5837-9451"
+    ],
+    "names": [
+     "Soo-jin Park"
+    ],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   }
+  ]
+ }
+}

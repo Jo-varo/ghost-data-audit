@@ -1,0 +1,77 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-opus-5-5",
+ "source": "evidence_23 customer_export_console_20260618.png",
+ "usage": {
+  "input_tokens": 3760,
+  "output_tokens": 476
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "export_1261",
+    "display_reference": "",
+    "record_kind": "user_export",
+    "exists": "present",
+    "emails": [
+     "marcus.lee@northstar.shop"
+    ],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "export_1260",
+    "display_reference": "",
+    "record_kind": "user_export",
+    "exists": "present",
+    "emails": [
+     "ingrid.dahl@outlook.com"
+    ],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "export_1259",
+    "display_reference": "",
+    "record_kind": "user_export",
+    "exists": "present",
+    "emails": [
+     "sara.kim@northstar.shop"
+    ],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "export_1258",
+    "display_reference": "",
+    "record_kind": "user_export",
+    "exists": "present",
+    "emails": [
+     "daniel.park@northstar.shop"
+    ],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   }
+  ]
+ }
+}

@@ -1,0 +1,21 @@
+{
+  "_source": "Allowed Operations table in problem_statement.md. Row order is the required step order within a phase.",
+  "phases": ["FINDING", "REMEDIATION", "VERIFICATION"],
+  "operations": [
+    {"phase": "FINDING", "operation": "REPORT_REMAINING_RECORD", "state": "PRESENT", "meaning": "A record that should have been deleted still exists."},
+    {"phase": "FINDING", "operation": "REPORT_EXPOSED_PII", "state": "PRESENT", "meaning": "A record may remain, but it still contains identifiers that should have been redacted or anonymized."},
+    {"phase": "FINDING", "operation": "REPORT_ACTIVE_DATA_FLOW", "state": "ACTIVE", "meaning": "An active process can copy or recreate the user's data."},
+    {"phase": "FINDING", "operation": "REPORT_RESTORE_RISK", "state": "ACTIVE", "meaning": "A backup or restore path can bring deleted data back."},
+    {"phase": "REMEDIATION", "operation": "DISABLE_DATA_FLOW", "state": "DISABLED", "meaning": "Stop the process that can copy or recreate the data."},
+    {"phase": "REMEDIATION", "operation": "BLOCK_RESTORE", "state": "BLOCKED", "meaning": "Prevent the affected backup from restoring the user's data."},
+    {"phase": "REMEDIATION", "operation": "DELETE_RECORD", "state": "ABSENT", "meaning": "Remove the entire record."},
+    {"phase": "REMEDIATION", "operation": "REDACT_RECORD", "state": "REDACTED", "meaning": "Keep the record but remove the identifying fields required by policy."},
+    {"phase": "REMEDIATION", "operation": "ANONYMIZE_RECORD", "state": "ANONYMIZED", "meaning": "Keep the record after irreversibly unlinking it from the user."},
+    {"phase": "VERIFICATION", "operation": "VERIFY_RECORD_ABSENT", "state": "ABSENT", "meaning": "Confirm that a record no longer exists."},
+    {"phase": "VERIFICATION", "operation": "VERIFY_RECORD_PRESENT", "state": "PRESENT", "meaning": "Confirm that a policy-required retained record still exists."},
+    {"phase": "VERIFICATION", "operation": "VERIFY_RECORD_REDACTED", "state": "REDACTED", "meaning": "Confirm that required identifying fields have been removed."},
+    {"phase": "VERIFICATION", "operation": "VERIFY_RECORD_ANONYMIZED", "state": "ANONYMIZED", "meaning": "Confirm that the record can no longer be linked to the user."},
+    {"phase": "VERIFICATION", "operation": "VERIFY_DATA_FLOW_DISABLED", "state": "DISABLED", "meaning": "Confirm that the relevant data flow is inactive."},
+    {"phase": "VERIFICATION", "operation": "VERIFY_RESTORE_BLOCKED", "state": "BLOCKED", "meaning": "Confirm that the affected data cannot be restored."}
+  ]
+}

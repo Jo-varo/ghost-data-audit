@@ -1,0 +1,109 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-sonnet-5-5",
+ "source": "evidence_37 security_audit_explorer_20260905.png",
+ "usage": {
+  "input_tokens": 3762,
+  "output_tokens": 717
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "audit_record_003",
+    "display_reference": "audit_record_003",
+    "record_kind": "security_audit_record",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_03"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "audit_record_002",
+    "display_reference": "audit_record_002",
+    "record_kind": "security_audit_record",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_03"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "audit_record_001",
+    "display_reference": "audit_record_001",
+    "record_kind": "security_audit_record",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_03"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "audit_record_006",
+    "display_reference": "audit_record_006",
+    "record_kind": "security_audit_record",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_03"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "audit_record_005",
+    "display_reference": "audit_record_005",
+    "record_kind": "security_audit_record",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_03"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "audit_record_004",
+    "display_reference": "audit_record_004",
+    "record_kind": "security_audit_record",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_03"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   }
+  ]
+ }
+}

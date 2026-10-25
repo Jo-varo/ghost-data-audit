@@ -1,0 +1,49 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-sonnet-5-5",
+ "source": "evidence_09 search_index_inspector_20260901.png",
+ "usage": {
+  "input_tokens": 3761,
+  "output_tokens": 261
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "search_428",
+    "display_reference": "search_428",
+    "record_kind": "search_document",
+    "exists": "present",
+    "emails": [
+     "g.silva76@gmail.com"
+    ],
+    "phones": [],
+    "names": [
+     "Gabriel Silva"
+    ],
+    "user_refs": [
+     "user_13"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "search_1874",
+    "display_reference": "search_1874",
+    "record_kind": "search_document",
+    "exists": "present",
+    "emails": [
+     "g.silva76.jr@gmail.com"
+    ],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   }
+  ]
+ }
+}

@@ -1,0 +1,24 @@
+{
+  "requests": 518,
+  "seconds": 0.1,
+  "rows": [
+    {
+      "purpose": "intent_classification",
+      "model": "claude-sonnet-5-5",
+      "calls": 0,
+      "cached_calls": 10,
+      "input_tokens": 26927,
+      "output_tokens": 10627,
+      "cost_usd": 0.160124
+    },
+    {
+      "purpose": "media_extraction",
+      "model": "claude-sonnet-5-5",
+      "calls": 0,
+      "cached_calls": 15,
+      "input_tokens": 58713,
+      "output_tokens": 5166,
+      "cost_usd": 0.16908600000000001
+    }
+  ]
+}

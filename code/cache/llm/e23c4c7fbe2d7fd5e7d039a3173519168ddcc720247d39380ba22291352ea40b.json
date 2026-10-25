@@ -1,0 +1,125 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-sonnet-5-5",
+ "source": "evidence_46 object_storage_browser_20260213.png",
+ "usage": {
+  "input_tokens": 3891,
+  "output_tokens": 915
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "",
+    "display_reference": "delivery_confirmation_19.pdf",
+    "record_kind": "support_attachment",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "delivery_confirmation_20.pdf",
+    "record_kind": "support_attachment",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "return_label_4821.pdf",
+    "record_kind": "support_attachment",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "return_label_4876.pdf",
+    "record_kind": "support_attachment",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "invoice_NS-10493.pdf",
+    "record_kind": "support_attachment",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "parcel_damage_7713.jpg",
+    "record_kind": "support_attachment",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "customer_export_2026-02-10.zip",
+    "record_kind": "user_export",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "",
+    "display_reference": "customer_export_2026-02-12.zip",
+    "record_kind": "user_export",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   }
+  ]
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-sonnet-5-5",
+ "source": "evidence_19 analytics_profile_view_20260713.png",
+ "usage": {
+  "input_tokens": 3892,
+  "output_tokens": 152
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "analytics_7438",
+    "display_reference": "analytics_7438",
+    "record_kind": "analytics_profile",
+    "exists": "present",
+    "emails": [
+     "darwish.omar@icloud.com"
+    ],
+    "phones": [],
+    "names": [
+     "Omar Darwish"
+    ],
+    "user_refs": [
+     "user_20"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": [
+     "user_20"
+    ]
+   }
+  ]
+ }
+}

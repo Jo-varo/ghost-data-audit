@@ -1,0 +1,45 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-sonnet-5-5",
+ "source": "evidence_14 connector_management_console_20260807.png",
+ "usage": {
+  "input_tokens": 3890,
+  "output_tokens": 263
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "data_flow_1121",
+    "display_reference": "data_flow_1121",
+    "record_kind": "data_flow",
+    "exists": "present",
+    "emails": [
+     "jain.aditi@gmail.com"
+    ],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": true,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   },
+   {
+    "resource_id": "data_flow_9846",
+    "display_reference": "data_flow_9846",
+    "record_kind": "data_flow",
+    "exists": "present",
+    "emails": [
+     "lucia-torres@gmail.com"
+    ],
+    "phones": [],
+    "names": [],
+    "user_refs": [],
+    "email_hashes": [],
+    "data_flow_enabled": true,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   }
+  ]
+ }
+}

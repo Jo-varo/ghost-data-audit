@@ -1,0 +1,29 @@
+{
+ "purpose": "media_extraction",
+ "model": "claude-sonnet-5-5",
+ "source": "evidence_42 deleted_account_reference_20260310.png",
+ "usage": {
+  "input_tokens": 3762,
+  "output_tokens": 113
+ },
+ "result": {
+  "records": [
+   {
+    "resource_id": "",
+    "display_reference": "user_17",
+    "record_kind": "other",
+    "exists": "present",
+    "emails": [],
+    "phones": [],
+    "names": [],
+    "user_refs": [
+     "user_17"
+    ],
+    "email_hashes": [],
+    "data_flow_enabled": null,
+    "restore_allowed": null,
+    "related_resource_ids": []
+   }
+  ]
+ }
+}
